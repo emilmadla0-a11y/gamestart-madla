@@ -115,9 +115,12 @@ require_once 'includes/header.php';
         <?= strtoupper(substr($article['forename'], 0, 1)) ?>
       </div>
       <div>
-        <div class="author-name">
-          <?= htmlspecialchars($article['forename'] . ' ' . $article['surname']) ?>
-        </div>
+    <div class="author-name">
+      <a href="member.php?id=<?= $article['member_id'] ?>" 
+        style="color:#fff; border-bottom:1px solid rgba(0,245,255,.3);">
+        <?= htmlspecialchars($article['forename'] . ' ' . $article['surname']) ?>
+      </a>
+    </div>
         <div class="author-email"><?= htmlspecialchars($article['email']) ?></div>
         <div class="author-joined">// Joined <?= date('Y-m-d', strtotime($article['joined'])) ?></div>
       </div>
